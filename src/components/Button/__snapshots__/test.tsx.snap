@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should snapshot the Button component 1`] = `
+.c0 {
+  display: flex;
+  background-color: #4EA8DE;
+}
+
+<main
+  class="c0"
+>
+  <h1>
+    Criar
+  </h1>
+  <svg
+    aria-label="Ícone com sinal de mais"
+    fill="currentColor"
+    height="32"
+    viewBox="0 0 256 256"
+    width="32"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="none"
+      height="256"
+      width="256"
+    />
+    <circle
+      cx="128"
+      cy="128"
+      fill="none"
+      r="96"
+      stroke="currentColor"
+      stroke-miterlimit="10"
+      stroke-width="16"
+    />
+    <line
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"
+      x1="88"
+      x2="168"
+      y1="128"
+      y2="128"
+    />
+    <line
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"
+      x1="128"
+      x2="128"
+      y1="88"
+      y2="168"
+    />
+  </svg>
+</main>
+`;

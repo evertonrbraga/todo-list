@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Task /> should snapshot the Task component 1`] = `
+.c0 {
+  background: #262626;
+}
+
+<main
+  class="c0"
+>
+  <h1>
+    Você ainda não tem tarefas cadastradas
+  </h1>
+</main>
+`;
