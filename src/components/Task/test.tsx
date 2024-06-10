@@ -10,6 +10,7 @@ describe('<Task />', () => {
   it('should check if the empty layout is rendering correctly', () => {
     render(<Task />)
     const title = screen.getByText('Você ainda não tem tarefas cadastradas')
+    const text = screen.getByText('Crie tarefas e organize seus itens a fazer')
     expect(title).toBeInTheDocument()
   })
 })
