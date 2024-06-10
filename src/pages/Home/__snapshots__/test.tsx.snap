@@ -98,6 +98,9 @@ exports[`<Home /> should snapshot the Home page 1`] = `
     <h1>
       Você ainda não tem tarefas cadastradas
     </h1>
+    <p>
+      Crie tarefas e organize seus itens a fazer
+    </p>
   </main>
 </main>
 `;
