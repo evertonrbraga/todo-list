@@ -3,21 +3,31 @@
 exports[`<Button /> should snapshot the Button component 1`] = `
 .c0 {
   display: flex;
-  background-color: #4EA8DE;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  padding: 12px 17px;
+  border-radius: 8px;
+  color: #FFF;
+  background-color: #1E6F9F;
+}
+
+.c0 p {
+  font-size: 1.1rem;
 }
 
 <main
   class="c0"
 >
-  <h1>
+  <p>
     Criar
-  </h1>
+  </p>
   <svg
     aria-label="Ícone com sinal de mais"
     fill="currentColor"
-    height="32"
+    height="22"
     viewBox="0 0 256 256"
-    width="32"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect
