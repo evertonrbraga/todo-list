@@ -2,12 +2,24 @@
 
 exports[`<Task /> should snapshot the Task component 1`] = `
 .c0 {
-  background: #262626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  color: #808080;
+}
+
+.c0 h1 {
+  font-size: 1.2rem;
 }
 
 <main
   class="c0"
 >
+  <img
+    alt="Ícone prancheta"
+    src="test-file-stub"
+  />
   <h1>
     Você ainda não tem tarefas cadastradas
   </h1>

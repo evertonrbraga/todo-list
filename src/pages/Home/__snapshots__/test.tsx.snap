@@ -1,19 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should snapshot the Home page 1`] = `
-.c1 {
+.c2 {
   display: flex;
-  background-color: #4EA8DE;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  padding: 12px 17px;
+  border-radius: 8px;
+  color: #FFF;
+  background-color: #1E6F9F;
+}
+
+.c2 p {
+  font-size: 1.1rem;
 }
 
 .c0 {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  max-width: 800px;
+  margin: 50px auto 0;
+  background-color: #1A1A1A;
 }
 
-.c2 {
-  background: #262626;
+.c0 img {
+  margin-bottom: 50px;
+}
+
+.c0 hr {
+  border: 2px solid #333333;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.c1 input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+}
+
+.c1 input::placeholder {
+  color: red;
+}
+
+.c3 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.c3 p,
+.c3 span {
+  font-weight: bold;
+}
+
+.c4 {
+  display: flex;
+  align-items: center;
+}
+
+.c4 p {
+  color: #4EA8DE;
+}
+
+.c6 {
+  display: flex;
+  align-items: center;
+}
+
+.c6 p {
+  color: #8284FA;
+}
+
+.c5 {
+  padding: 4px 12px;
+  margin-left: 5px;
+  border-radius: 10px;
+  color: #FFF;
+  background-color: #333333;
+}
+
+.c7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  color: #808080;
+}
+
+.c7 h1 {
+  font-size: 1.2rem;
 }
 
 <main
@@ -23,78 +108,102 @@ exports[`<Home /> should snapshot the Home page 1`] = `
     alt="Logo ToDo"
     src="test-file-stub"
   />
-  <input
-    placeholder="Adicione uma nova tarefa"
-    type="text"
-  />
-  <main
+  <div
     class="c1"
   >
-    <h1>
-      Criar
-    </h1>
-    <svg
-      aria-label="Ícone com sinal de mais"
-      fill="currentColor"
-      height="32"
-      viewBox="0 0 256 256"
-      width="32"
-      xmlns="http://www.w3.org/2000/svg"
+    <input
+      placeholder="Adicione uma nova tarefa"
+      type="text"
+    />
+    <main
+      class="c2"
     >
-      <rect
-        fill="none"
-        height="256"
-        width="256"
-      />
-      <circle
-        cx="128"
-        cy="128"
-        fill="none"
-        r="96"
-        stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="16"
-      />
-      <line
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
-        x1="88"
-        x2="168"
-        y1="128"
-        y2="128"
-      />
-      <line
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
-        x1="128"
-        x2="128"
-        y1="88"
-        y2="168"
-      />
-    </svg>
-  </main>
-  <p>
-    Tarefas criadas
-  </p>
-  <span>
-    0
-  </span>
-  <p>
-    Concluídas
-  </p>
-  <span>
-    0
-  </span>
-  );
-  <main
-    class="c2"
+      <p>
+        Criar
+      </p>
+      <svg
+        aria-label="Ícone com sinal de mais"
+        fill="currentColor"
+        height="22"
+        viewBox="0 0 256 256"
+        width="22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <circle
+          cx="128"
+          cy="128"
+          fill="none"
+          r="96"
+          stroke="currentColor"
+          stroke-miterlimit="10"
+          stroke-width="16"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="88"
+          x2="168"
+          y1="128"
+          y2="128"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="128"
+          x2="128"
+          y1="88"
+          y2="168"
+        />
+      </svg>
+    </main>
+  </div>
+  <div
+    class="c3"
   >
+    <div
+      class="c4"
+    >
+      <p>
+        Tarefas criadas
+      </p>
+      <span
+        class="c5"
+      >
+        0
+      </span>
+    </div>
+    <div
+      class="c6"
+    >
+      <p>
+        Concluídas
+      </p>
+      <span
+        class="c5"
+      >
+        0
+      </span>
+    </div>
+  </div>
+  <hr />
+  <main
+    class="c7"
+  >
+    <img
+      alt="Ícone prancheta"
+      src="test-file-stub"
+    />
     <h1>
       Você ainda não tem tarefas cadastradas
     </h1>

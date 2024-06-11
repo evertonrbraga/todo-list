@@ -8,13 +8,21 @@ export const Home: T.HomeType = () => {
   return (
     <S.HomeContainer>
       <img src={logoTodo} alt='Logo ToDo' />
-      <input type='text' placeholder='Adicione uma nova tarefa' />
-      <Button />
-      <p>Tarefas criadas</p>
-      <span>0</span>
-      <p>Concluídas</p>
-      <span>0</span>
-      );
+      <S.FormContainer>
+        <input type='text' placeholder='Adicione uma nova tarefa' />
+        <Button />
+      </S.FormContainer>
+      <S.TaskContainer>
+        <S.Created>
+          <p>Tarefas criadas</p>
+          <S.Counter>0</S.Counter>
+        </S.Created>
+        <S.Finished>
+          <p>Concluídas</p>
+          <S.Counter>0</S.Counter>
+        </S.Finished>
+      </S.TaskContainer>
+      <hr />
       <Task />
     </S.HomeContainer>
   )
