@@ -9,7 +9,12 @@ export const TaskContainer = styled.main<T.TaskProps>`
     margin-top: 50px;
     color: ${theme.gray300};
 
+    img {
+      margin-bottom: 20px;
+    }
+
     h1 {
+      margin-bottom: 2px;
       font-size: 1.2rem;
     }
   `}

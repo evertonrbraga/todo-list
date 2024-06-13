@@ -9,7 +9,7 @@ export const ButtonContainer = styled.main<T.ButtonProps>`
     font-weight: bold;
     padding: 12px 17px;
     border-radius: 8px;
-    color: ${theme.white};
+    color: ${theme.gray200};
     background-color: ${theme.blueDark};
 
     p {

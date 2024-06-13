@@ -10,12 +10,12 @@ export const GlobalStyle = createGlobalStyle`
 
       :focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${theme['green500']};
+        box-shadow: 0 0 0 2px ${theme.purple};
       }
 
       body {
-        background: ${theme['gray700']};
-        color: ${theme['gray300']};
+        background: ${theme.gray600};
+        color: ${theme.gray300};
         -webkit-font-smoothing: antialiased;
       }
 
