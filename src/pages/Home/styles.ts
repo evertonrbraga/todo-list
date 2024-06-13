@@ -1,6 +1,16 @@
 import styled, { css } from 'styled-components'
 import * as T from './types'
 
+export const BackgroundTop = styled.div`
+  ${({ theme }) => css`
+    margin: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-color: ${theme.gray700};
+  `}
+`
+
 export const HomeContainer = styled.main<T.HomeProps>`
   ${({ theme }) => css`
     display: flex;
@@ -8,16 +18,19 @@ export const HomeContainer = styled.main<T.HomeProps>`
     align-items: center;
     justify-content: center;
     max-width: 800px;
-    margin: 50px auto 0;
-    background-color: ${theme.gray600};
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-top: 70px;
 
     img {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     hr {
-      border: 2px solid ${theme.gray400};
+      margin-top: 25px;
       width: 100%;
+      border: 1px solid ${theme.gray400};
     }
   `}
 `
@@ -33,25 +46,26 @@ export const FormContainer = styled.div`
       border: none;
       border-radius: 8px;
       background-color: ${theme.gray400};
+      color: ${theme.gray100};
+      padding-left: 15px;
 
       &::placeholder {
-        color: red;
+        color: ${theme.gray300};
       }
     }
   `}
 `
 
 export const TaskContainer = styled.div<T.HomeProps>`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
 
-    p,
-    span {
-      font-weight: bold;
-    }
-  `}
+  p,
+  span {
+    font-weight: bold;
+  }
 `
 export const Created = styled.div<T.HomeProps>`
   ${({ theme }) => css`
@@ -77,7 +91,7 @@ export const Finished = styled.div<T.HomeProps>`
 export const Counter = styled.span`
   ${({ theme }) => css`
     padding: 4px 12px;
-    margin-left: 5px;
+    margin-left: 8px;
     border-radius: 10px;
     color: ${theme.white};
     background-color: ${theme.gray400};
