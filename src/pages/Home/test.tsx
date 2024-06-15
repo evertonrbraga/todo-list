@@ -1,4 +1,4 @@
-import { render, screen } from 'project-testing-library'
+import { fireEvent, render, screen } from 'project-testing-library'
 import { Home } from '.'
 
 describe('<Home />', () => {
@@ -37,4 +37,36 @@ describe('<Home />', () => {
     expect(finishedLabel).toBeInTheDocument()
     expect(finishedQuantity).toHaveTextContent('0')
   })
+
+  it('should check if the input field is working properly', () => {
+    render(<Home />)
+    const input = screen.getByPlaceholderText('Adicione uma nova tarefa')
+    expect(input).toHaveValue('')
+    fireEvent.change(input, { target: { value: 'Task one' } })
+    expect(input).toHaveValue('Task one')
+  })
+
+  it('should create a new task', () => {
+    render(<Home />)
+    const input = screen.getByPlaceholderText('Adicione uma nova tarefa')
+    const button = screen.getByText('Criar')
+    const createdTasks = screen.getByLabelText('created-tasks')
+    expect(createdTasks).toHaveTextContent('0')
+    fireEvent.change(input, { target: { value: 'Task one' } })
+    fireEvent.click(button)
+    expect(input).toHaveValue('Task one')
+    expect(createdTasks).toHaveTextContent('1')
+  })
+
+  it('should check if there are no tasks to show', () => {
+    render(<Home />)
+    const empty = screen.getByText('Você ainda não tem tarefas cadastradas')
+    expect(empty).toBeInTheDocument()
+  })
+
+  // it('should check if there are tasks to show', () => {
+  //   render(<Home />)
+  //   const empty = screen.getByText('Você ainda não tem tarefas cadastradas')
+  //   expect(empty).not.toBeInTheDocument()
+  // })
 })

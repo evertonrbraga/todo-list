@@ -56,7 +56,7 @@ export const FormContainer = styled.div`
   `}
 `
 
-export const TaskContainer = styled.div<T.HomeProps>`
+export const TaskHeader = styled.div<T.HomeProps>`
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
