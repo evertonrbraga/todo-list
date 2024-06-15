@@ -7,16 +7,23 @@ exports[`<Button /> should snapshot the Button component 1`] = `
   gap: 5px;
   font-weight: bold;
   padding: 12px 17px;
+  border: none;
   border-radius: 8px;
   color: #D9D9D9;
   background-color: #1E6F9F;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: #4EA8DE;
 }
 
 .c0 p {
   font-size: 1.1rem;
 }
 
-<main
+<button
   class="c0"
 >
   <p>
@@ -67,5 +74,5 @@ exports[`<Button /> should snapshot the Button component 1`] = `
       y2="168"
     />
   </svg>
-</main>
+</button>
 `;

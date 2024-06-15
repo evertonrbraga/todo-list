@@ -1,3 +1,3 @@
-export type ButtonType = React.FC 
+export type ButtonType = React.FC
 
 export interface ButtonProps {}
