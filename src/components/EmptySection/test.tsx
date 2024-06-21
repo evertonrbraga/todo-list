@@ -9,7 +9,7 @@ describe('<EmptySection />', () => {
 
   it('should if the title is rendering correctly', () => {
     render(<EmptySection />)
-    const title = screen.getByText('EmptySection')
+    const title = screen.getByText('Você ainda não tem tarefas cadastradas')
     expect(title).toBeInTheDocument()
   })
 })
