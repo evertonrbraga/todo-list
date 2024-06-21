@@ -23,7 +23,6 @@ export const Home: T.HomeType = () => {
 
   const handleCreateNewTask = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log('a')
     if (!description.trim()) return
     setTasks([...tasks, { id: uuidv4(), description, checked: false }])
     setDescription('')
