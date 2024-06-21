@@ -64,9 +64,22 @@ describe('<Home />', () => {
     expect(empty).toBeInTheDocument()
   })
 
-  // it('should check if there are tasks to show', () => {
-  //   render(<Home />)
-  //   const empty = screen.getByText('Você ainda não tem tarefas cadastradas')
-  //   expect(empty).not.toBeInTheDocument()
-  // })
+  it('should disable the create button if the input is empty', () => {
+    render(<Home />)
+    const buttonContainer = screen.getByText('Criar').closest('button')
+    const input = screen.getByPlaceholderText('Adicione uma nova tarefa')
+    expect(buttonContainer).toBeDisabled()
+    fireEvent.change(input, { target: { value: 'Task 1' } })
+    expect(buttonContainer).not.toBeDisabled()
+  })
+
+  it('should check if there are tasks to show', () => {
+    render(<Home />)
+    const input = screen.getByPlaceholderText('Adicione uma nova tarefa')
+    const button = screen.getByText('Criar')
+    const empty = screen.queryByText('Você ainda não tem tarefas cadastradas')
+    fireEvent.change(input, { target: { value: 'Task one' } })
+    fireEvent.click(button)
+    expect(empty).not.toBeInTheDocument()
+  })
 })

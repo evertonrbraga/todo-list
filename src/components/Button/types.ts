@@ -1,3 +1,4 @@
-export type ButtonType = React.FC
+import React from 'react'
 
-export interface ButtonProps {}
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}

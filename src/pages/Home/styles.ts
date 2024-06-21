@@ -35,7 +35,7 @@ export const HomeContainer = styled.main<T.HomeProps>`
   `}
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   ${({ theme }) => css`
     width: 100%;
     display: flex;

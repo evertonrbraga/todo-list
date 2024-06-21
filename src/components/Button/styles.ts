@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import * as T from './types'
 
 export const ButtonContainer = styled.button<T.ButtonProps>`
-  ${({ theme }) => css`
+  ${({ theme, disabled }) => css`
     display: flex;
     align-items: center;
     gap: 5px;
@@ -13,7 +13,7 @@ export const ButtonContainer = styled.button<T.ButtonProps>`
     color: ${theme.gray200};
     background-color: ${theme.blueDark};
     transition: 0.2s ease;
-    cursor: pointer;
+    cursor: ${disabled ? 'not-allowed' : 'pointer'};
 
     &:hover {
       background-color: ${theme.blue};

@@ -1,15 +1,32 @@
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import logoTodo from '../../assets/logo-todo.svg'
 import { Button } from 'components/Button'
 import { Task } from 'components/Task'
 import * as T from './types'
 import * as S from './styles'
+import { EmptySection } from 'components/EmptySection'
+
+interface TaskProps {
+  id: string
+  description: string
+  checked: boolean
+}
 
 export const Home: T.HomeType = () => {
-  const [tasks, setTasks] = useState([])
+  const [description, setDescription] = useState<string>('')
+  const [tasks, setTasks] = useState<TaskProps[]>([])
 
-  const handleCreateNewTask = event => {
-    setTasks([...tasks, event.target.value])
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setDescription(event.target.value)
+  }
+
+  const handleCreateNewTask = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    console.log('a')
+    if (!description.trim()) return
+    setTasks([...tasks, { id: uuidv4(), description, checked: false }])
+    setDescription('')
   }
 
   return (
@@ -17,9 +34,14 @@ export const Home: T.HomeType = () => {
       <S.BackgroundTop />
       <S.HomeContainer>
         <img src={logoTodo} alt='Logo ToDo' />
-        <S.FormContainer>
-          <input type='text' placeholder='Adicione uma nova tarefa' />
-          <Button onClick={handleCreateNewTask} />
+        <S.FormContainer onSubmit={handleCreateNewTask}>
+          <input
+            type='text'
+            name='description'
+            onChange={handleInputChange}
+            placeholder='Adicione uma nova tarefa'
+          />
+          <Button type='submit' disabled={!description} />
         </S.FormContainer>
         <S.TaskHeader>
           <S.Created>
@@ -32,7 +54,7 @@ export const Home: T.HomeType = () => {
           </S.Finished>
         </S.TaskHeader>
         <hr />
-        <Task />
+        {tasks.length > 0 ? <Task /> : <EmptySection />}
       </S.HomeContainer>
     </>
   )
