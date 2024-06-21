@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Task /> should snapshot the Task component 1`] = `
+exports[`<EmptySection /> should snapshot the EmptySection component 1`] = `
 .c0 {
   display: flex;
   flex-direction: column;
@@ -21,8 +21,15 @@ exports[`<Task /> should snapshot the Task component 1`] = `
 <main
   class="c0"
 >
+  <img
+    alt="Ícone prancheta"
+    src="test-file-stub"
+  />
   <h1>
-    Task
+    Você ainda não tem tarefas cadastradas
   </h1>
+  <p>
+    Crie tarefas e organize seus itens a fazer
+  </p>
 </main>
 `;
