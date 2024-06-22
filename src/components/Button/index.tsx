@@ -3,11 +3,7 @@ import * as T from './types'
 import * as S from './styles'
 import React from 'react'
 
-export const Button: React.FC<T.ButtonProps> = ({
-  onClick,
-  disabled,
-  ...props
-}) => {
+export const Button: React.FC<T.ButtonProps> = ({ onClick, disabled }) => {
   return (
     <S.ButtonContainer onClick={onClick} disabled={disabled}>
       <p>Criar</p>
